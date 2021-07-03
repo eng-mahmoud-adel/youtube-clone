@@ -1,0 +1,99 @@
+@import "../../base";
+
+.videoHorizontal {
+  border-bottom: 0.3px solid $border-color;
+  cursor: pointer;
+
+  &-left {
+    position: relative;
+    text-align: center;
+    padding-left: 0 !important;
+  }
+
+  &-thumbnail {
+    width: 100%;
+
+    &-channel {
+      width: 50%;
+      border-radius: 50%;
+    }
+
+    &-wrapper {
+      width: 100%;
+    }
+  }
+
+  &-duration {
+    position: absolute;
+    bottom: 0.65rem;
+    right: 1.2rem;
+    padding: 0.2rem;
+    font-size: 0.9rem;
+    background-color: #080808ec;
+    border-radius: 3px;
+  }
+
+  &-details {
+    font-size: 0.9rem;
+  }
+
+  &-title {
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 0.1px;
+
+    @include line-clamp(2);
+  }
+
+  &-desc {
+    @include line-clamp(2);
+  }
+
+  &-channel {
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 0.9rem;
+
+      @include line-clamp(1);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .videoHorizontal {
+    font-size: 0.8rem;
+
+    &-details {
+      @include line-clamp(1);
+    }
+
+    &-channel {
+      margin: 0.1rem 0;
+
+      img {
+        display: none;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    &-desc {
+      display: none;
+    }
+
+    &-title {
+      font-size: 1rem;
+
+      @include line-clamp(2);
+    }
+  }
+}

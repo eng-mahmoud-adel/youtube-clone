@@ -1,0 +1,13 @@
+@import '../../../base';
+
+.watchScreen-player {
+  height: 60vh;
+  background-color: #353946;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: $breakpoint-small) {
+  .watchScreen-player {
+    height: 35vh;
+  }
+}
